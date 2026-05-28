@@ -1034,7 +1034,7 @@ font-weight:800;
 <div class="wrap">
 
 <div class="expire">
-หมดอายุการใช้งาน : 27 พฤษภาคม พ.ศ. 2569
+
 </div>
 
 <div class="main">
@@ -1197,7 +1197,7 @@ class="aiGrid"></div>
 
 <script>
 /* ========= REAL EXPIRY ========= */
-const expiryDate = new Date(2026, 4, 27, 23, 59, 59);
+const expiryDate = new Date(2026, 5, 30, 23, 59, 59);
 
 function isExpired(){
 return new Date()>expiryDate;
@@ -1328,34 +1328,7 @@ let preRisk=0;
 let preBiasP=1;
 let preBiasB=1;
 
-function updateExpireText(){
 
-const now = new Date();
-
-const expire = new Date(2026,4,27,23,59,59);
-
-const diff = expire - now;
-
-if(diff <= 0){
-
-expireText.innerHTML =
-"⛔ License หมดอายุแล้ว";
-
-return;
-
-}
-
-const days =
-Math.floor(diff / (1000*60*60*24));
-
-expireText.innerHTML =
-`หมดอายุการใช้งาน : 27 พฤษภาคม พ.ศ. 2569 | เหลือ ${days} วัน`;
-
-}
-
-setInterval(updateExpireText,1000);
-
-updateExpireText();
 
 
 function initAI(){
